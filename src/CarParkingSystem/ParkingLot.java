@@ -2,9 +2,9 @@ package CarParkingSystem;
 
 
 public class ParkingLot {
-    int row = 2;
-    int col = 6;
-    Car[][] parkingSlot = new Car[row][col];
+    private int row = 2;
+    private int col = 6;
+    private Car[][] parkingSlot = new Car[row][col];
 
     public void park(Car carObj, char row, int column) {
         try {
