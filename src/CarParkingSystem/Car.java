@@ -45,7 +45,15 @@ public class Car {
         System.out.println("Car Model        : " + model);
         System.out.println("Occupied Slot    : " + parkingSlot);
         System.out.println("Date             : " + dateTimeIn[0]);
-        System.out.println("Time             : " + dateTimeIn[1]);
+        if (timeIn[0] == 0) {
+            System.out.println("Time             : " + (timeIn[0] + 12) + ":" + timeIn[1]+ ":" + timeIn[2] + " Midnight");
+        } else if (timeIn[0] == 12){
+            System.out.println("Time             : " + (timeIn[0]) + ":" + timeIn[1]+ ":" + timeIn[2] + " Noon" );
+        } else if (timeIn[0] > 12){
+            System.out.println("Time             : " + (timeIn[0] - 12) + ":" + timeIn[1]+ ":" + timeIn[2] + " PM");
+        } else {
+            System.out.println("Time             : " + dateTimeIn[1] + " AM");
+        }
     }
 
     public float balance(){
